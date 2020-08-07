@@ -20,3 +20,26 @@ button {
   text-align: center;
   margin-top: 0em;
 }
+.time {
+  margin-top: 10px;
+  font-size: 25px;
+}
+#btn0,
+#btn1,
+#btn2,
+#btn3 {
+  background-color: green;
+  width: 120px;
+  font-size: 20px;
+  color: white;
+  border: 1px solid #1d3c6a;
+  margin: 10px 20px 10px 0px;
+  padding: 10px 10px;
+}
+#btn0:hover,
+#btn1:hover,
+#btn2:hover,
+#btn3:hover {
+  cursor: pointer;
+  background-color: orange;
+}
