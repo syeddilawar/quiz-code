@@ -3,7 +3,7 @@ var secondsLeft = 60;
 function setTime() {
   var timerInterval = setInterval(function () {
     secondsLeft--;
-    timeEl.textContent = secondsLeft + " TIMER ";
+    timeEl.textContent = secondsLeft + " : (Timer) ";
 
     if (secondsLeft === 0) {
       clearInterval(timerInterval);
