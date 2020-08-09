@@ -28,3 +28,5 @@ javascript functions
 <img width="511" alt="Screen Shot 2020-08-08 at 11 01 06 PM" src="https://user-images.githubusercontent.com/66503170/89726075-422c2800-d9cb-11ea-8f75-5f1ec8cf958a.png">
 
 ### Screenshots of webpage
+
+<img width="899" alt="Screen Shot 2020-08-08 at 11 04 55 PM" src="https://user-images.githubusercontent.com/66503170/89726113-abac3680-d9cb-11ea-9735-a3f867d8325b.png">
