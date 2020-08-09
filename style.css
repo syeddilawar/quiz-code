@@ -51,3 +51,7 @@ button:hover {
 #questionText {
   font-size: 30px;
 }
+.formcontainer,
+.highscorecontainer {
+  display: none;
+}

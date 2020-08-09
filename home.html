@@ -9,13 +9,33 @@
   <body>
     <h1 class="home-h1">Code-quiz</h1>
     <h1 class="time"></h1>
-    <div id="sec">
+    <!-- <div id="sec"> -->
+    <div class="questioncontainer">
       <hr />
       <div id="questionText"></div>
       <hr />
-      <div class="questioncontainer"></div>
+      <div id="feedback"></div>
     </div>
-    <div id="feedback"></div>
+    <!-- </div> -->
+    <div class="formcontainer">
+      <form>
+        <label for="username">
+          Enter Your Initials
+        </label>
+        <input type="text" id="username" />
+        <button id="usersubmit">Submit</button>
+      </form>
+    </div>
+    <div class="highscorecontainer">
+      <div>
+        High Scorces :
+      </div>
+      <div id="scoresdiv">
+
+
+      </div>
+    </div>
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="script.js"></script>
   </body>

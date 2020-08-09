@@ -1,12 +1,14 @@
 let questionpointer = 0;
 let score = 0;
+let scorearray = [];
+var timerInterval;
 var timeEl = document.querySelector(".time");
 var secondsLeft = 60;
 function setTime() {
-  var timerInterval = setInterval(function () {
+  timerInterval = setInterval(function () {
     secondsLeft--;
     timeEl.textContent = secondsLeft + " : Quiz Timer.";
-    if (secondsLeft === 0) {
+    if (secondsLeft <= 0) {
       clearInterval(timerInterval);
       sendMessage();
     }
@@ -89,8 +91,23 @@ function checkanswers(event) {
 
   questionpointer++;
   //call this only when there are more question.
-  showQuestion();
+  if (questionpointer < questions.length) {
+    showQuestion();
+  } else {
+    clearInterval(timerInterval);
+    $(".questioncontainer").empty();
+    scorearray;
+    $(".formcontainer").css("display", "block");
+  }
 }
+$("#usersubmit").on("click", function (event) {
+  event.preventDefault();
+  // alert(score);
+  localStorage.setItem("quizscore", score);
+  $(".formcontainer").css("display", "none");
+  $(".highscorecontainer").css("display", "block");
+  $("#scoresdiv").text(localStorage.getItem("quizscore"));
+});
 
 $(document).ready(function () {
   showQuestion();
