@@ -10,10 +10,25 @@ p {
   font-size: 25px;
 }
 button {
+  background: linear-gradient(135deg, orange 60%, cyan);
+  width: 120px;
+  font-size: 20px;
+  color: white;
+  border: 1px solid #1d3c6a;
+  border-radius: 10px;
+  margin: 10px 20px 10px 0px;
+  padding: 10px 10px;
+}
+button:hover {
+  cursor: pointer;
+  background: linear-gradient(#e66465, #757fe9);
+}
+.start {
   background: olivedrab;
-  font-size: 25px;
+  font-size: 20px;
   color: white;
   border: green;
+  border-radius: 10px;
   margin: 10px;
 }
 .home-h1 {
@@ -23,23 +38,16 @@ button {
 .time {
   margin-top: 10px;
   font-size: 25px;
+  color: #e66465;
 }
-#btn0,
-#btn1,
-#btn2,
-#btn3 {
-  background: linear-gradient(135deg, orange 60%, cyan);
-  width: 120px;
-  font-size: 20px;
-  color: white;
-  border: 1px solid #1d3c6a;
-  margin: 10px 20px 10px 0px;
-  padding: 10px 10px;
-}
+
 #btn0:hover,
 #btn1:hover,
 #btn2:hover,
 #btn3:hover {
   cursor: pointer;
   background: linear-gradient(#e66465, #757fe9);
+}
+#questionText {
+  font-size: 30px;
 }

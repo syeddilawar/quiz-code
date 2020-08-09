@@ -1,29 +1,48 @@
 let questionpointer = 0;
-let quizTimer;
 let score = 0;
-//html controls
+var timeEl = document.querySelector(".time");
+var secondsLeft = 60;
+function setTime() {
+  var timerInterval = setInterval(function () {
+    secondsLeft--;
+    timeEl.textContent = secondsLeft + " : Quiz Timer.";
+    if (secondsLeft === 0) {
+      clearInterval(timerInterval);
+      sendMessage();
+    }
+  }, 1000);
+}
+setTime();
+
 let questioncontainerdiv = document.querySelector(".questioncontainer");
 let currentquestion = document.getElementById("questionText");
 let questions = [
   {
-    questionText: "Hyper Text Markup Language Stand For?",
-    answers: ["JavaScript", "XHTML", "CSS", "HTML"],
+    questionText: "What are people who write computer code called?",
+    answers: ["Graphic designer", "Professors", "Manufacturers", "Programmers"],
     correctAnswerIndex: "3",
   },
   {
-    questionText: "Which language is used for styling web pages?",
-    answers: ["HTML", "JQuery", "CSS", "XML"],
-    correctAnswerIndex: "2",
-  },
-  {
-    questionText: "Which is not a JavaScript Framework?",
-    answers: ["Python Script", "JQuery", "Django", "NodeJS"],
+    questionText: "What is computer coding?",
+    answers: [
+      "Telling a computer what to do",
+      "A list of function",
+      "A radio show",
+      "A tv show",
+    ],
     correctAnswerIndex: "0",
   },
   {
-    questionText: "Which is used for Connect To Database?",
-    answers: ["PHP", "HTML", "JS", "All"],
+    questionText:
+      "The action of doing something over and over again, repeating code.?",
+    answers: ["Code", "Program", "Loop", "Bug"],
     correctAnswerIndex: "2",
+  },
+  {
+    questionText:
+      "What word describe the set of instructions that computer need to do work?",
+    answers: ["Program", "Synopsis", "Blueprint", "Agenda"],
+    correctAnswerIndex: "0",
   },
   {
     questionText: "what is grass colour?",
