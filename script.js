@@ -52,7 +52,6 @@ let questions = [
     correctAnswerIndex: "1",
   },
 ];
-
 function showQuestion() {
   currentquestion.innerText = questions[questionpointer].questionText;
 
@@ -65,7 +64,6 @@ function showQuestion() {
     questioncontainerdiv.appendChild($btn);
   }
 }
-
 function checkanswers(event) {
   if (event.target.id === questions[questionpointer].correctAnswerIndex) {
     //Score will be increased
@@ -90,7 +88,6 @@ function checkanswers(event) {
   questioncontainerdiv.removeChild($btn);
 
   questionpointer++;
-  //call this only when there are more question.
   if (questionpointer < questions.length) {
     showQuestion();
   } else {
@@ -108,7 +105,6 @@ $("#usersubmit").on("click", function (event) {
   $(".highscorecontainer").css("display", "block");
   $("#scoresdiv").text(localStorage.getItem("quizscore"));
 });
-
 $(document).ready(function () {
   showQuestion();
   // quizTimer=setInterval()
